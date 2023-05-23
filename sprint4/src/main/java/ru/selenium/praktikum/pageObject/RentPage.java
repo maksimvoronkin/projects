@@ -46,15 +46,9 @@ public class RentPage {
         return this;
     }
 
-    //Выбор цвета самоката "Черный жемчуг"
-    public RentPage choiseBlackPearl() {
-        webDriver.findElement(checkBoxBlackPearl).click();
-        return this;
-    }
-
-    //Выбор цвета самоката "Серая безысходность"
-    public RentPage choiseGreyHopelessness() {
-        webDriver.findElement(checkBoxGrayHopelessness).click();
+    //Метод выбора самоката
+    public RentPage clickCheckboxScooter(String CheckboxScooter) {
+        webDriver.findElement(By.xpath(CheckboxScooter)).click();
         return this;
     }
 

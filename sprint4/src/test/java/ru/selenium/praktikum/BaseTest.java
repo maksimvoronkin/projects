@@ -3,12 +3,15 @@ package ru.selenium.praktikum;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
+
+import static ru.selenium.praktikum.config.AppUrl.APP_URL;
 
 public class BaseTest {
     WebDriver webDriver;
@@ -31,7 +34,7 @@ public class BaseTest {
         WebDriverManager.firefoxdriver().setup();
         webDriver = new FirefoxDriver();
         webDriver.manage().window().maximize();
-        webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
 
